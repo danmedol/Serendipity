@@ -10,15 +10,15 @@ namespace Serendipity
     public class MissDistance
     {
         [JsonPropertyName("astronomical")]
-        public string Astronomical { get; set; }
+        public string? Astronomical { get; set; }
 
         [JsonPropertyName("lunar")]
-        public string Lunar { get; set; }
+        public string? Lunar { get; set; }
 
         [JsonPropertyName("kilometers")]
-        public string Kilometers { get; set; }
+        public string? Kilometers { get; set; }
 
         [JsonPropertyName("miles")]
-        public string Miles { get; set; }
+        public string? Miles { get; set; }
     }
 }

@@ -10,12 +10,12 @@ namespace Serendipity
     public class RelativeVelocity
     {
         [JsonPropertyName("kilometers_per_second")]
-        public string KilometersPerSecond { get; set; }
+        public string? KilometersPerSecond { get; set; }
 
         [JsonPropertyName("kilometers_per_hour")]
-        public string KilometersPerHour { get; set; }
+        public string? KilometersPerHour { get; set; }
 
         [JsonPropertyName("miles_per_hour")]
-        public string MilesPerHour { get; set; }
+        public string? MilesPerHour { get; set; }
     }
 }

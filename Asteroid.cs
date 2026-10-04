@@ -10,12 +10,12 @@ namespace Serendipity
     public class Asteroid
     {
         [JsonPropertyName("id")]
-        public string Id { get; set; }
+        public string? Id { get; set; }
 
         [JsonPropertyName("name")]
-        public string Name { get; set; }
+        public string? Name { get; set; }
 
-        [JsonPropertyName("estimated-diameter")]
+        [JsonPropertyName("estimated_diameter")]
         public EstimatedDiameter EstimatedDiameter { get; set; }
 
         [JsonPropertyName("is_potentially_hazardous_asteroid")]
