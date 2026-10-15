@@ -41,14 +41,16 @@ namespace Serendipity
                     Console.WriteLine($"Velocidade: {double.Parse(asteroid.CloseApproachData?[0]?.RelativeVelocity?.KilometersPerHour, CultureInfo.InvariantCulture):F2} KM/H");
                     Console.WriteLine($"Distância: {double.Parse(asteroid.CloseApproachData?[0]?.MissDistance?.Kilometers, CultureInfo.InvariantCulture):F2} KM");
                     
+                    string riscoColisao;
                     if(asteroid.IsPotentiallyHazardousAsteroid == true)
                     {
-                        Console.WriteLine($"Risco de colisão: Sim");
+                        riscoColisao = "Sim";
                     }
                     else
                     {
-                        Console.WriteLine($"Risco de colisão: Não");
+                        riscoColisao = "Não";
                     }
+                    Console.WriteLine($"Risco de colisão: {riscoColisao}");
 
                     Console.WriteLine("----------------------------------------");
                     
