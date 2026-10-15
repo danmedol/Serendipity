@@ -12,3 +12,4 @@
 /Users/Dani/Desktop/Serendipity1.1/obj/Debug/net10.0/Serendipity1.1.pdb
 /Users/Dani/Desktop/Serendipity1.1/obj/Debug/net10.0/Serendipity1.1.genruntimeconfig.cache
 /Users/Dani/Desktop/Serendipity1.1/obj/Debug/net10.0/ref/Serendipity1.1.dll
+/Users/Dani/Desktop/Serendipity1.1/obj/Debug/net10.0/Serendipity1.1.sourcelink.json

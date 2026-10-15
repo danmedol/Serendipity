@@ -27,10 +27,13 @@ namespace Serendipity
 
             Console.WriteLine($"{root.ElementCount} objetos foram encontrados próximos à Terra nessa data.");
 
+            List<Asteroid> asteroids = new List<Asteroid>();
+
             foreach(var day in root.NearEarthObjects)
             {
                 foreach(var asteroid in day.Value)
                 {
+                    asteroids.Add(asteroid);
                     
                     Console.WriteLine($"Nome: {asteroid.Name}");
                     Console.WriteLine($"Identificação: {asteroid.Id}");
@@ -46,11 +49,21 @@ namespace Serendipity
                     {
                         Console.WriteLine($"Risco de colisão: Não");
                     }
-                    
+
                     Console.WriteLine("----------------------------------------");
+                    
 
                 }
+                
             }
+
+            Console.WriteLine("Objetos perigosos:");
+
+                    var objetosPerigosos = asteroids.Where(asteroid => asteroid.IsPotentiallyHazardousAsteroid);
+                    foreach(var objeto in objetosPerigosos)
+                    {
+                        Console.WriteLine(objeto.Name);
+                    }
 
         }
 
