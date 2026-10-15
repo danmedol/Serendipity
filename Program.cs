@@ -59,12 +59,19 @@ namespace Serendipity
 
             Console.WriteLine("Objetos perigosos:");
 
-                    var objetosPerigosos = asteroids.Where(asteroid => asteroid.IsPotentiallyHazardousAsteroid);
-                    foreach(var objeto in objetosPerigosos)
-                    {
-                        Console.WriteLine(objeto.Name);
-                    }
-
+                    var objetosPerigosos = asteroids.Where(asteroid => asteroid.IsPotentiallyHazardousAsteroid).ToList();
+                    
+                    if(objetosPerigosos.Count == 0)
+                        {
+                            Console.WriteLine("Nenhum objeto encontrado");
+                        }
+                        else
+                        {
+                            foreach(var objeto in objetosPerigosos)
+                            {
+                                Console.WriteLine(objeto.Name);
+                            }
+                        }
         }
 
         static async Task<Root> GetRootAsync(HttpClient client, string date)
